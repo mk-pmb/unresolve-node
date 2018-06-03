@@ -1,0 +1,37 @@
+{ "name": "unresolve",
+  "version": "1.0.0",
+  "description": "Guess an import identifier that might require.resolve() to the same file path but starts with a package name.",
+  "keywords": [ "import", "require", "resolve", "relative" ],
+
+  "author": "M.K. (https://github.com/mk-pmb)",
+  "homepage": "https://github.com/mk-pmb/unresolve-node/#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mk-pmb/unresolve-node.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mk-pmb/unresolve-node/issues"
+  },
+  "contributors": [],
+
+  "private": false, "license": "ISC",
+
+  "main": "un.js",
+  "scripts": { "test": "nodejs test/all.js" },
+  "directories": { "test": "test" },
+
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "find-up": "^2.1.0",
+    "nofs": "^0.11.22"
+  },
+  "devDependencies": {
+    "absdir": "^1.0.6",
+    "esmod-pmb": "^0.1.5",
+    "p-tape": "^3.0.0",
+    "resolve": "^1.7.1"
+  },
+
+
+  "npm vs. BOM = Unexpected token": "-*- coding: UTF-8 -*-"
+}
