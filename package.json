@@ -1,5 +1,5 @@
 { "name": "unresolve",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Guess an import identifier that might require.resolve() to the same file path but starts with a package name.",
   "keywords": [ "import", "require", "resolve", "relative" ],
 

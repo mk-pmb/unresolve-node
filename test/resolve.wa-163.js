@@ -13,7 +13,10 @@ var Promise = require('bluebird'),
   homeDir = process.env.HOME;
 
 if (homeDir) {
-  opt.paths = [homeDir + '/.node_modules'];
+  opt.paths = (require.paths || []).concat([
+    homeDir + '/.node_modules',
+    homeDir + '/.node_libraries',
+  ]);
 }
 
 function resolveAsyncPr(spec) {
