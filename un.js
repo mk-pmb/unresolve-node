@@ -21,11 +21,16 @@ function unresolve(path, opt) {
   return promisedFs.realpath(target.norm).then(function (abs) {
     target.abs = abs;
     return findUp('package.json', { cwd: target.abs });
-  }).then(function (manifAbs) {
+  }).then(function (manifAbs, err) {
+    if (!manifAbs) {
+      err = ('Unable to find a package.json anywhere above '
+        + target.abs + ', original path: ' + path + ', normalized: '
+        + target.norm);
+      throw new Error(err);
+    }
     target.manifAbs = manifAbs;
     target.pkgDir = pathLib.dirname(manifAbs);
-    var sub = pathLib.relative(target.pkgDir, target.abs);
-    target.pkgSub = sub;
+    target.pkgSub = pathLib.relative(target.pkgDir, target.abs);
     return promisedFs.readFile(manifAbs, 'UTF-8');
   }).then(function (manifData) {
     try {
