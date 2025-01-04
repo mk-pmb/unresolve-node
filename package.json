@@ -1,5 +1,5 @@
 { "name": "unresolve",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Guess an import identifier that might require.resolve() to the same file path but starts with a package name.",
   "keywords": [ "import", "require", "resolve", "relative" ],
 
@@ -21,15 +21,15 @@
   "directories": { "test": "test" },
 
   "dependencies": {
-    "bluebird": "^3.5.1",
-    "find-up": "^2.1.0",
-    "nofs": "^0.11.22"
+    "bluebird": "^3.7.2",
+    "find-up": "^5.0.0",
+    "nofs": "^0.12.3"
   },
   "devDependencies": {
     "absdir": "^1.0.6",
-    "esmod-pmb": "^0.1.5",
-    "p-tape": "^3.0.0",
-    "resolve": "^1.7.1"
+    "esmod-pmb": "^0.1.13",
+    "p-tape": "^4.0.2",
+    "resolve": "^1.22.10"
   },
 
 
